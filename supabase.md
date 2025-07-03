@@ -1,7 +1,7 @@
 #### Integrations
 
 # Supabase
-### Connect your Rork app's backend to Supabase database
+#### Connect your Rork app's backend to Supabase database
 
 [Supabase](https://supabase.com/) is an open-source backend platform offering **a hosted PostgreSQL database** along with powerful tools for **authentication, storage, and real-time data synchronization**. By integrating your app's backend with Supabase database, you give your app a place to store and manage data. That means your app can remember things (like user-created notes, saved tasks, or chat messages) and display them whenever needed. If someone adds or updates something in the app, it gets stored safely in the cloud. With Supabase, your app can grow from a simple prototype into a smart, interactive tool that works like a real product.
 
@@ -55,7 +55,7 @@ If you don't have a database table in your Supabase project yet, you can create 
 
 ## Integrate Rork with Supabase
 
-When you have both a Supabase project and backend integration set up, you can prompt Rork to add a Supabase integration to your project. Make sure to mention `backend` in your prompt, otherwise Rork will integrate with Supabase skipping the backend making it less secure.
+When you have both a Supabase project and backend integration set up, you can prompt Rork to add a Supabase integration to your project. Make sure to mention `backend` in your prompt, otherwise Rork will integrate with Supabase skipping the backend, making it less secure.
 
 > [!NOTE]  
 > Example prompt:
@@ -66,7 +66,7 @@ When you have both a Supabase project and backend integration set up, you can pr
 > [!TIP]  
 > Sometimes you'll need to add user authentication to your project and you can use Supabase for that as well. Usually, Rork will figure it out on its own, but if you know you'll need it, you can mention it in your integration prompt.
 
-## Security concerns
+## Security considerations
 
 ### Row Level Security (RLS)
 
@@ -74,7 +74,7 @@ Supabase includes a powerful security feature called **Row Level Security (RLS)*
 
 When apps connect directly from the frontend (like in many no-code tools), RLS must be set up to protect your data. But when using Rork's backend integration, your app connects to Supabase through a secure backend server. **This means you don't need to configure RLS yourself.**
 
-Rork handles secure access for you—your secret keys stay hidden, and the backend ensures users only see or change what they're allowed to.
+With Rork your secret keys stay hidden, and with the authentication set up, the backend ensures users only see or change what they're allowed to.
 
 > [!WARNING]  
 > If you ever decide to expose Supabase directly from the frontend (not recommended), then enabling and configuring RLS will be necessary.
